@@ -4,9 +4,10 @@
 #include "ejercicio2.cpp"
 #include "ejercicio4.cpp"
 #include "ejercicio5.cpp"
-#include "ejercicio6.cpp"
+// #include "ejercicio6.cpp" -> include in ejercicio9
 #include "ejercicio7.cpp"
 #include "ejercicio8.cpp"
+#include "ejercicio9.cpp"
 
 int main() {
   Graph G1 = GRAPHinit(6);
@@ -42,6 +43,10 @@ int main() {
   GRAPHshow(G2);
 
   printf("\nEs G2 no-dirigido?: %s\n", GRAPHundir(G2) ? "Si" : "No");
+
+  printf("\nEliminar arista 0-2 de G2:\n");
+  UGRAPHremoveEdge(G2, 0, 2);
+  GRAPHshow(G2);
 
   GRAPHdestroy(G1);
   GRAPHdestroy(G2);
