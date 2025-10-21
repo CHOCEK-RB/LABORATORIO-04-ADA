@@ -5,6 +5,7 @@
 #include "ejercicio4.cpp"
 #include "ejercicio5.cpp"
 #include "ejercicio6.cpp"
+#include "ejercicio7.cpp"
 
 int main() {
   Graph G1 = GRAPHinit(6);
@@ -26,6 +27,8 @@ int main() {
   printf("\nEliminar arco 1->5 de G1:\n");
   GRAPHremoveArc(G1, 1, 5);
   GRAPHshow(G1);
+
+  printf("\nEs G1 no-dirigido?: %s\n", GRAPHundir(G1) ? "Si" : "No");
 
   GRAPHdestroy(G1);
   printf("Memoria liberada.\n");
