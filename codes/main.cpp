@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "ejercicio2.cpp"
+// #include "ejercicio2.cpp" -> include in ejercicio10
 #include "ejercicio4.cpp"
 #include "ejercicio5.cpp"
 // #include "ejercicio6.cpp" -> include in ejercicio9
+#include "ejercicio10.cpp"
 #include "ejercicio7.cpp"
 #include "ejercicio8.cpp"
 #include "ejercicio9.cpp"
@@ -44,9 +45,13 @@ int main() {
 
   printf("\nEs G2 no-dirigido?: %s\n", GRAPHundir(G2) ? "Si" : "No");
 
+  printf("\nGrado maximo en G2: %d\n", UGRAPHmaxDegree(G2));
+
   printf("\nEliminar arista 0-2 de G2:\n");
   UGRAPHremoveEdge(G2, 0, 2);
   GRAPHshow(G2);
+
+  printf("\nGrado maximo en G2: %d\n", UGRAPHmaxDegree(G2));
 
   GRAPHdestroy(G1);
   GRAPHdestroy(G2);
