@@ -6,6 +6,7 @@
 #include "ejercicio5.cpp"
 #include "ejercicio6.cpp"
 #include "ejercicio7.cpp"
+#include "ejercicio8.cpp"
 
 int main() {
   Graph G1 = GRAPHinit(6);
@@ -30,8 +31,20 @@ int main() {
 
   printf("\nEs G1 no-dirigido?: %s\n", GRAPHundir(G1) ? "Si" : "No");
 
-  GRAPHdestroy(G1);
-  printf("Memoria liberada.\n");
+  Graph G2 = GRAPHinit(4);
+  UGRAPHinsertEdge(G2, 0, 1);
+  UGRAPHinsertEdge(G2, 1, 2);
+  UGRAPHinsertEdge(G2, 2, 3);
+  UGRAPHinsertEdge(G2, 3, 0);
+  UGRAPHinsertEdge(G2, 0, 2);
 
+  printf("\nEstado inicial de G2:\n");
+  GRAPHshow(G2);
+
+  printf("\nEs G2 no-dirigido?: %s\n", GRAPHundir(G2) ? "Si" : "No");
+
+  GRAPHdestroy(G1);
+  GRAPHdestroy(G2);
+  printf("Memoria liberada.\n");
   return 0;
 }
