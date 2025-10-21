@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "ejercicio2.cpp"
+#include "ejercicio4.cpp"
 
 int main() {
   Graph G1 = GRAPHinit(6);
@@ -12,6 +13,8 @@ int main() {
   GRAPHinsertArc(G1, 2, 4);
   GRAPHinsertArc(G1, 3, 1);
   GRAPHinsertArc(G1, 5, 3);
+
+  GRAPHshow(G1);
 
   printf("Grado de salida del vertice 0: %d\n", GRAPHoutdeg(G1, 0));
   printf("Grado de entrada del vertice 1: %d\n", GRAPHindeg(G1, 1));
